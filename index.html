@@ -179,43 +179,43 @@
             .nav-links { display:none; }
         }
         .spotify-section {
-    margin: 5rem 8vw;
-  }
+            margin: 5rem 8vw;
+        }
 
-  .spotify-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin-top: 3rem;
-    align-items: start;
-  }
+        .spotify-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
 
-  /* Tablet: 2 columns */
-  @media (max-width: 900px) {
-    .spotify-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+        /* Tablet: 2 columns */
+        @media (max-width: 900px) {
+            .spotify-grid {
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-  /* Mobile: 1 column */
-  @media (max-width: 560px) {
-    .spotify-section {
-      margin: 3rem 4vw;
-    }
-    .spotify-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  }
+        /* Mobile: 1 column */
+        @media (max-width: 560px) {
+            .spotify-section {
+            margin: 3rem 4vw;
+            }
+            .spotify-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            }
+        }
 
-  .spotify-card {
-    /* padding: 1rem; */
-    border: 1px solid rgba(200, 169, 110, 0.12);
-    border-radius: 12px;
-    background: var(--ink3);
-    height: auto;
-  }
-    </style>
+        .spotify-card {
+            /* padding: 1rem; */
+            border: 1px solid rgba(200, 169, 110, 0.12);
+            border-radius: 12px;
+            background: var(--ink3);
+            height: auto;
+        }
+</style>
 </head>
 <body>
 
@@ -475,7 +475,7 @@
 <section id="contact" class="contact">
     <p class="lbl reveal" style="display:inline-block;">Book · Connect · Collaborate</p>
     <h2 class="ctitle reveal">Immerse yourself in a<br><em>soul-stirring</em> experience</h2>
-    <img src="Images/last.jpeg" alt="Get in Touch Image" style="max-width: 100%; height: auto; margin-top: 2rem;">
+    <img src="Images/last.jpeg" alt="Get in Touch Image" style="max-width: 300px; height: auto; margin-top: 2rem;">
     <p class="csub reveal">Get in touch</p>
     <div class="cdet reveal">
         <div>
@@ -493,20 +493,32 @@
 <footer>
     <span class="flogo">Sameer Rao</span>
     <ul class="flinks">
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Spotify</a></li>
+        <li><a href="https://www.youtube.com/c/SameerRao">YouTube</a></li>
+        <li><a href="https://www.instagram.com/bansurisameerrao/">Instagram</a></li>
+        <li><a href="https://open.spotify.com/artist/2sJdt1Qlq5zmiMNe3dWYan">Spotify</a></li>
     </ul>
     <span class="fcopy">&copy; 2025 Sameer Rao. All Rights Reserved.</span>
 </footer>
 
 <script>
     function toggleVideos() {
-        const extraVideos = document.querySelectorAll('.extra-video');
-        const btn = document.querySelector('.watch-more-btn');
-        extraVideos.forEach(vid => vid.classList.toggle('visible'));
-        btn.textContent = btn.textContent === 'Watch More' ? 'Show Less' : 'Watch More';
-    }
+    const extraVideos = document.querySelectorAll('.extra-video');
+    const btn = document.querySelector('.watch-more-btn');
+
+    extraVideos.forEach(vid => {
+        vid.classList.toggle('visible');
+
+        // Force reload iframe when shown
+        if (vid.classList.contains('visible')) {
+            const iframe = vid.querySelector('iframe');
+            const src = iframe.src;
+            iframe.src = "";
+            iframe.src = src;
+        }
+    });
+
+    btn.textContent = btn.textContent === 'Watch More' ? 'Show Less' : 'Watch More';
+}
     const io = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, {threshold: 0.1});

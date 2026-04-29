@@ -178,6 +178,43 @@
             .disco-grid { grid-template-columns:repeat(2,1fr); }
             .nav-links { display:none; }
         }
+        .spotify-section {
+    margin: 5rem 8vw;
+  }
+
+  .spotify-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  /* Tablet: 2 columns */
+  @media (max-width: 900px) {
+    .spotify-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile: 1 column */
+  @media (max-width: 560px) {
+    .spotify-section {
+      margin: 3rem 4vw;
+    }
+    .spotify-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .spotify-card {
+    /* padding: 1rem; */
+    border: 1px solid rgba(200, 169, 110, 0.12);
+    border-radius: 12px;
+    background: var(--ink3);
+    height: auto;
+  }
     </style>
 </head>
 <body>
@@ -347,11 +384,63 @@
     </div>
 </section>
 
+<div class="spotify-section">
+  
+
+  <div class="spotify-grid">
+    <!-- Card 1 -->
+    <div class="spotify-card">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/4ExzbU9eTVdmYvUTCdZlZC?utm_source=generator"
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+    <!-- Card 2 -->
+    <div class="spotify-card">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/4vEGT4BKgEfydlaJRgZFw3?utm_source=generator"
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+    <!-- Card 3 -->
+    <div class="spotify-card">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/7FwrxHVEEWXsf9yGOq79G5?utm_source=generator"
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="spotify-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2fvoZawLw9dFw1vDCVXVyh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="spotify-card">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/5WbgBMfjsMOt6lMAn6onGJ?utm_source=generator"
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+    <!-- Card 5 -->
+    <div class="spotify-card">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/1zND9WKQ0NpM6BYBiND8FT?utm_source=generator"
+        width="100%" height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- ACCOLADES -->
 <section id="accolades" class="accolades">
     <p class="lbl reveal">The Accolades</p>
     <div class="rule reveal"></div>
-    <h2 class="stitle reveal">Recognising the <em>Efforts</em></h2>
+    <h2 class="stitle reveal">Echoes of <em>Excellence</em></h2>
     <div class="acc-inner">
         <div class="reveal">
             <div class="air">
@@ -386,6 +475,7 @@
 <section id="contact" class="contact">
     <p class="lbl reveal" style="display:inline-block;">Book · Connect · Collaborate</p>
     <h2 class="ctitle reveal">Immerse yourself in a<br><em>soul-stirring</em> experience</h2>
+    <img src="Images/last.jpeg" alt="Get in Touch Image" style="max-width: 100%; height: auto; margin-top: 2rem;">
     <p class="csub reveal">Get in touch</p>
     <div class="cdet reveal">
         <div>
@@ -396,6 +486,7 @@
             <p class="ci-label">Email</p>
             <a href="mailto:bansurisameerofficial@gmail.com">bansurisameerofficial@gmail.com</a>
         </div>
+        
     </div>
 </section>
 

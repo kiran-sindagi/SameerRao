@@ -19,6 +19,7 @@
             --serif: 'Cormorant Garamond', Georgia, serif;
             --sans: 'Raleway', sans-serif;
         }
+        
         html { scroll-behavior: smooth; }
         body {
             background: var(--ink);
@@ -60,7 +61,7 @@
         .hero-cta:hover { background: var(--gold); color: var(--ink); }
         .hero-right { position: relative; overflow: hidden; }
         /* BEFORE */
-        .hero-img { width: 80%; height: 80%; object-fit: fill; object-position: center; margin-top: 10%; }
+        .hero-img { width: auto; height: 75%; object-fit: fill; object-position: center; margin-top: 10%; }
 
         /* AFTER
         .hero-img {
@@ -533,24 +534,26 @@
 <section id="contact" class="contact">
     <p class="lbl reveal" style="display:inline-block;">Book · Connect · Collaborate</p>
     <div class="legacy-grid" id="contact-latest" style="display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;">
-        <img src="Images/last.jpeg" alt="Get in Touch Image" style="max-width: 300px; height: auto; margin-top: 2rem;">
+        <img src="Images/last.jpeg" alt="Get in Touch Image" style="max-width: 350px; height: auto; margin-top: 2rem;">
         <div>
             <h2 class="ctitle reveal">Immerse yourself in a<br><em>soul-stirring</em> experience</h2>
             <p class="csub reveal">Get in touch</p>
+
+            <div class="cdet reveal">
+                <div>
+                    <p class="ci-label">Phone</p>
+                    <a href="tel:+919742049884">+91 97420 49884</a>
+                </div>
+                <div>
+                    <p class="ci-label">Email</p>
+                    <a href="mailto:bansurisameerofficial@gmail.com">bansurisameerofficial@gmail.com</a>
+                </div>
+            </div>
+
         </div>
     </div>
     
-    <div class="cdet reveal">
-        <div>
-            <p class="ci-label">Phone</p>
-            <a href="tel:+919742049884">+91 97420 49884</a>
-        </div>
-        <div>
-            <p class="ci-label">Email</p>
-            <a href="mailto:bansurisameerofficial@gmail.com">bansurisameerofficial@gmail.com</a>
-        </div>
-        
-    </div>
+    
 </section>
 
 <footer>

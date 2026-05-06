@@ -101,7 +101,7 @@
         .legacy-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid rgba(200,169,110,0.12); filter: sepia(0.15) contrast(1.05); }
         .cap { font-size: 0.68rem; letter-spacing: 0.12em; color: var(--text-muted); text-align: center; margin-top: -1rem; font-style: italic; }
         .legacy-text { padding-left: 2rem; border-left: 1px solid var(--gold-dim); }
-        .legacy-lead { font-family: var(--serif); font-size: 1.45rem; font-weight: 300; color: var(--text); line-height: 1.6; margin-bottom: 1.8rem; }
+        .legacy-lead { font-family: var(--serif); font-size: 1.45rem; font-weight: 300; color: var(--text); line-height: 1.6; margin-bottom: 1.8rem; margin-top: 1.8rem;}
         .body-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.9; }
         .body-text p + p { margin-top: 1.1rem; }
 
@@ -162,8 +162,9 @@
         footer { padding:2.2rem 8vw; border-top:1px solid rgba(200,169,110,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
         .flogo { font-family:var(--serif); font-size:1.05rem; font-style:italic; color:var(--gold); }
         .flinks { display:flex; gap:2rem; list-style:none; }
-        .flinks a { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; transition:color 0.3s; }
+        .flinks a { display: inline-flex; align-items: center; gap: 0.5rem; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; transition:color 0.3s; }
         .flinks a:hover { color:var(--gold); }
+        .flinks a img { width: 16px; height: auto; display: inline-block; }
         .fcopy { font-size:0.62rem; letter-spacing:0.08em; color:var(--text-muted); }
 
         .video-section { padding: 5rem 8vw; background: var(--ink2); }
@@ -297,12 +298,15 @@
     <h2 class="stitle reveal">Following His <em>Footsteps</em></h2>
     <div class="legacy-grid">
         <div class="legacy-photos reveal">
-            <img class="legacy-photo" src="Images/pg2img1.jpeg">
+            <img class="legacy-photo" src="Images/with_first_sir.jpeg">
+            <p class="cap">With Pt. Veerabhadraiah Hiremath ji</p>
+            <img class="legacy-photo" src="Images/pg2img1.jpeg" alt="Performance with Guruji">
             <p class="cap">With Padma Vibhushan Pt. Hariprasad Chaurasia ji</p>
-            <img class="legacy-photo" src="Images/pg2img2.jpeg" alt="Performance with Guruji">
-            <!-- <p class="cap">In concert — Vrindaban Gurukul</p> -->
         </div>
         <div class="legacy-text reveal">
+            <div class="body-text">
+                <p>In the legacy - First sentence - Sameer began his formative training under the esteemed <span class="legacy-lead">Pandit Veerabhadraiah Hiremath Ji,</span> whose mentorship provided the clarity and direction that defined his early musical trajectory.</p>
+            </div>
             <p class="legacy-lead">
                 Nurtured in the revered <em>Guru–Shishya Parampara</em> under
                 Padma Vibhushan <strong>Pandit Hariprasad Chaurasia ji</strong>.
@@ -324,7 +328,7 @@
     <div class="artistry-inner">
         <div class="reveal">
             <div class="body-text">
-                <p>A practitioner of the <strong>Tantrakari style</strong>, Sameer approaches Music as <em>Aradhana</em> — a profound offering and meditative pursuit. His performances are marked by a rare balance: meticulously structured yet equally abstract.</p>
+                <p>Artfully integrating the emotive fluidity of Gayaki Ang with the rhythmic precision of tantrakari style, Sameer approaches music as <strong>Aradhana</strong> - a sacred, meditative journey inwards. His performances are marked by a rare balance: meticulously structured yet equally abstract.</p>
             </div>
             <blockquote class="pull-quote">"The listeners experience a journey that is introspective and deeply transformative."</blockquote>
             <div class="body-text">
@@ -332,7 +336,7 @@
             </div>
         </div>
         <div class="art-photos reveal">
-            <img src="Images/pg3img2.jpeg" alt="Sameer performing">
+            <img src="Images/mbai1.jpeg" alt="Sameer performing">
             <img src="Images/pg3img1.jpeg" alt="Sameer on AIR">
         </div>
     </div>
@@ -371,22 +375,12 @@
             <iframe src="https://www.youtube.com/embed/sDUgT07_72w" allowfullscreen></iframe>
         </div>
         <div class="video-item extra-video">
-            <iframe src="https://www.youtube.com/embed/H0kh3Lcav7U" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/oXGV_aTtWtQ?si=kx00yIdNIYzJN51C" allowfullscreen></iframe>
         </div>
         <div class="video-item extra-video">
-            <iframe src="https://www.youtube.com/embed/vPP9J1hmTIw" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/icEfefPv-XU?si=UaiMX8SBButArh5P" allowfullscreen></iframe>
         </div>
-        <div class="video-item extra-video">
-            <iframe src="https://www.youtube.com/embed/vgOWStoD0YA" allowfullscreen></iframe>
-        </div>
-        <div class="video-item extra-video">
-            <iframe src="https://www.youtube.com/embed/18n4nBj8yjY" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="video-single">
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/C-5n7lCPGkk" allowfullscreen></iframe>
-        </div>
+        
     </div>
     <div class="watch-more-container reveal">
         <button class="watch-more-btn" onclick="toggleVideos()">Watch More</button>
@@ -427,21 +421,21 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="spotify-card">
+    <!-- <div class="spotify-card">
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/album/5WbgBMfjsMOt6lMAn6onGJ?utm_source=generator"
         width="100%" height="352" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-    </div>
+    </div> -->
     <!-- Card 5 -->
-    <div class="spotify-card">
+    <!-- <div class="spotify-card">
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/track/1zND9WKQ0NpM6BYBiND8FT?utm_source=generator"
         width="100%" height="352" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-    </div>
+    </div> -->
 
 
 
@@ -455,9 +449,9 @@
     </div>
 
 
-    <div class="spotify-card">
+    <!-- <div class="spotify-card">
       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5CM4NZvO3LRhv4kHCfk1j2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    </div> -->
 
 
 
@@ -471,6 +465,9 @@
     <h2 class="stitle reveal">Solo &amp; <em>Collaborations</em></h2>
     <p class="reveal" style="font-size:0.88rem;color:var(--text-muted);max-width:560px;margin-top:0.8rem;">Performed across India and internationally — China, Switzerland, Germany, France, Australia, Spain, South Korea, Norway, the UK and the USA.</p>
     <div class="perf-grid reveal">
+        <div class="perf-cell"><img src="Images/solos1.jpeg" alt="Concert"></div>
+        <div class="perf-cell"><img src="Images/solos2.jpeg" alt="Concert"></div>
+        <div class="perf-cell"><img src="Images/solos3.jpeg" alt="Concert"></div>
         <div class="perf-cell"><img src="Images/pg5img1.jpeg" alt="Concert"></div>
         <div class="perf-cell"><img src="Images/pg5img2.jpeg"></div>
         <div class="perf-cell"><img src="Images/pg5img3.jpeg" alt="Concert"></div>
@@ -486,16 +483,16 @@
         </div>
     </div> -->
 
-    <div class="collab-panel reveal">
+    <!-- <div class="collab-panel reveal">
         <div>
             <p class="lbl">Musical Dialogues</p>
             <p class="body-text" style="font-size:0.88rem;">Sameer has collaborated with Fremantle Symphony Orchestra (Perth), Matthew Sharp (Cellist, London), George Brooks (Saxophonist), Sonia Loinsworth (Vocalist, Norway), Dr. Mysore M. Manjunath (Carnatic Violinist), Vidwan Kudamaloor Janardanan, Mysore A. Chandan Kumar, Sri Manish Pingle, Ustad Rafique Khan &amp; Ustad Shafique Khan, and many more.</p>
-            <!-- <div class="collab-tags">
+            <div class="collab-tags">
                 <span class="tag">Carnatic</span><span class="tag">Slide Guitar</span><span class="tag">Santoor</span><span class="tag">Saxophone</span><span class="tag">Cello</span><span class="tag">Symphony Orchestra</span>
-            </div> -->
+            </div>
         </div>
         <img class="collab-img" src="Images/pg5img6.jpeg" alt="Fusion performance">
-    </div>
+    </div> -->
 </section>
 
 <!-- ACCOLADES -->
@@ -504,27 +501,30 @@
     <div class="rule reveal"></div>
     <h2 class="stitle reveal">Echoes of <em>Excellence</em></h2>
     <div class="acc-inner">
-        <div class="reveal">
-            <div class="air">
-                <span class="ltr">An</span>
-                <p><strong>'A' Grade Artist</strong><br>All India Radio &amp; empanelled artist with<br>the Indian Council for Cultural Relations</p>
+        <div>
+            <div class="reveal">
+                <div class="air">
+                    <span class="ltr">An</span>
+                    <p><strong>'A' Grade Artist</strong><br>All India Radio &amp; empanelled artist with<br>the Indian Council for Cultural Relations</p>
+                </div>
+                <div class="award">
+                    <span class="award-n">Samskrithika Saarathi</span>
+                    <span class="award-o">Natya Taranga, Sagara — 2024</span>
+                </div>
+                <div class="award">
+                    <span class="award-n">Surmani</span>
+                    <span class="award-o">Sur Singar Samsad, Mumbai — 2008</span>
+                </div>
+                <div class="award">
+                    <span class="award-n">Nada Kishore</span>
+                    <span class="award-o">Nada Bramha Sangeeth Sabha, Mysore — 2006</span>
+                </div>
+                <div class="award">
+                    <span class="award-n">Award of Excellence</span>
+                    <span class="award-o">Guru Ganayogi Trust, Chennai — 2004</span>
+                </div>
             </div>
-            <div class="award">
-                <span class="award-n">Samskrithika Saarathi</span>
-                <span class="award-o">Natya Taranga, Sagara — 2024</span>
-            </div>
-            <div class="award">
-                <span class="award-n">Surmani</span>
-                <span class="award-o">Sur Singar Samsad, Mumbai — 2008</span>
-            </div>
-            <div class="award">
-                <span class="award-n">Nada Kishore</span>
-                <span class="award-o">Nada Bramha Sangeeth Sabha, Mysore — 2006</span>
-            </div>
-            <div class="award">
-                <span class="award-n">Award of Excellence</span>
-                <span class="award-o">Guru Ganayogi Trust, Chennai — 2004</span>
-            </div>
+            <div style="font-family:var(--serif); font-size:2rem; font-style:italic; color:var(--gold); line-height:1; text-align: center; margin-top: 1rem;">And many more</div>
         </div>
         <div class="acc-photos reveal">
             <img src="Images/pg6img1.jpeg" alt="Award ceremony">
@@ -562,10 +562,11 @@
 <footer>
     <span class="flogo">Sameer Rao</span>
     <ul class="flinks">
-        <li><a href="https://www.youtube.com/c/SameerRao">YouTube</a></li>
-        <li><a href="https://www.instagram.com/bansurisameerrao/">Instagram</a></li>
-        <li><a href="https://open.spotify.com/artist/2sJdt1Qlq5zmiMNe3dWYan">Spotify</a></li>
-        <li><a href="https://www.facebook.com/bansurisameer/">Facebook</a></li>
+        <li><a href="https://open.spotify.com/artist/2sJdt1Qlq5zmiMNe3dWYan"><img src="logos/spotify.png" alt="Spotify logo">Spotify</a></li>
+        <li><a href="https://www.youtube.com/c/SameerRao"><img src="logos/youtube.png" alt="YouTube logo">YouTube</a></li>
+        <li><a href="https://music.apple.com/in/artist/sameer-rao/926806650"><img src="logos/itunes.png" alt="iTunes logo">iTunes</a></li>
+        <li><a href="https://www.instagram.com/bansurisameerrao/"><img src="logos/insta.png" alt="Instagram logo">Instagram</a></li>
+        <li><a href="https://www.facebook.com/bansurisameer/"><img src="logos/facebook.png" alt="Facebook logo">Facebook</a></li>
     </ul>
     <span class="fcopy">&copy; 2025 Sameer Rao. All Rights Reserved.</span>
 </footer>
@@ -574,6 +575,7 @@
     function toggleVideos() {
     const extraVideos = document.querySelectorAll('.extra-video');
     const btn = document.querySelector('.watch-more-btn');
+    const sbl = document.querySelector('#scroll-back-link')
 
     extraVideos.forEach(vid => {
         vid.classList.toggle('visible');
